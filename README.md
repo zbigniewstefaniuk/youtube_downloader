@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-It's small script implemented using PyTube, that allows you to donwload any Video form YouTube with any quality and then convert it to mp3 or wav format with Pydub.
+It's small script implemented using PyTube, that allows you to donwload any Video form YouTube with high quality and then convert it to mp3 or wav format with Pydub.
 </p>
 
 
