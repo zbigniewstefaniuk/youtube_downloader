@@ -1,0 +1,25 @@
+# Environments
+.venv
+.venv
+.venv
+venv/
+venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+Music From Youtube/
+
+
+.idea
+
+
+venv/Scripts/pip3.exe
+venv/Scripts/pip3.8.exe
+venv/Scripts/pip.exe
+venv/Scripts/flask.exe
+venv/Scripts/easy_install.exe
+venv/Scripts/deactivate.bat
+venv/Scripts/activate
+.vscode/settings.json
+venv/Scripts/easy_install-3.8.exe
