@@ -4,14 +4,11 @@ import glob
 from pydub import AudioSegment
 from pytube import YouTube
 
-SONGS_PATH = './Music From Youtube'             # Path where the songs are located
+SONGS_PATH = './Downlods'             # Path where the songs are located
 
 
 def youtube_downloader():
-    """
-    :return: this script return song
-    """
-    yt_link = YouTube(input('URL: '))           # Getting song url
+    yt_link = YouTube(input('Paste here YouTube link > '))           # Getting song url
     print('processing...')
     song = yt_link.streams.last()               # selecting *webm format for best audio quality
     song_title = yt_link.title                  # getting title for song
@@ -20,14 +17,13 @@ def youtube_downloader():
     print('\nDownloading is complete\n')
 
 
-youtube_downloader()
 
 def converter_to_audio():
     extension_list = ('*.webm', '*.flv')        # files with this extension will be selected
 
     os.chdir(SONGS_PATH)                        
     for extension in extension_list:
-        print('Processing songs...')
+        print('Converting song...')
         for video in glob.glob(extension):
             mp3_filename = os.path.splitext(
                 os.path.basename(video))[0] + '.mp3'
@@ -36,7 +32,6 @@ def converter_to_audio():
                                                  bitrate="256k",)
     print('Downloaded !')
 
-converter_to_audio()
 
 def del_files():
     print('program start')
@@ -49,4 +44,7 @@ def del_files():
         print(reversed_txt[1])
 
 
-# del_files()
+if __name__ == "__main__":
+    youtube_downloader()
+    converter_to_audio()
+    # del_files()
